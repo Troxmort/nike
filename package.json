@@ -1,0 +1,30 @@
+{
+  "name": "Nicolas",
+  "version": "1.0.0",
+  "description": "FE",
+  "main": "index.js",
+  "dependencies": {
+    "fs": "*",
+    "gulp": "^4.0.2",
+    "gulp-concat": "*",
+    "gulp-minify-css": "*",
+    "gulp-rename": "*",
+    "sass": "^1.43.4",
+    "shelljs": "*",
+    "yargs": "*"
+  },
+  "devDependencies": {
+    "gulp-notify": "*",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "*",
+    "gulp-webserver": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolas Cedron",
+  "license": "ISC"
+}
