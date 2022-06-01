@@ -7,12 +7,20 @@ body {
     font-size: 1.6rem;
 }
 
+.container {
+    width: 140rem;
+    margin: 0 auto;
+}
+
+.main-sneakers-container {
+    display: flex;
+}
 
 .article-sneakers-container {
-    width: 100%;
     min-width: 32rem;
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
+    margin-right: 2rem;
 }
 
 .sneakers-img-container{
