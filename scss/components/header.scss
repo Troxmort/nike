@@ -1,0 +1,34 @@
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+
+    &__logo{
+        flex-grow: .5;
+    }
+
+    &__navegation{
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        li{
+            padding: .5rem 1rem;
+        }
+    }
+
+    &__elemnt{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__elemnt--icons{
+        margin-right: 5rem;
+        .search{
+            margin-right: 1rem;
+        }
+    }
+
+}

@@ -422,3 +422,42 @@ body {
   overflow-x: hidden;
   background-color: #262626;
 }
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.menu__logo {
+  flex-grow: 0.5;
+}
+.menu__navegation {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__navegation li {
+  padding: 0.5rem 1rem;
+}
+.menu__elemnt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__elemnt--icons {
+  margin-right: 5rem;
+}
+.menu__elemnt--icons .search {
+  margin-right: 1rem;
+}
