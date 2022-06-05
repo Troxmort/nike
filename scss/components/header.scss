@@ -1,34 +1,179 @@
 .menu{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     align-items: center;
-    margin-top: 2.5rem;
+    grid-template-columns: repeat(20%, 70%, 10% );
+    grid-template-areas: 'navegation  logo logo card';
+    justify-content: space-between;
+    position: relative;
 
     &__logo{
-        flex-grow: .5;
+        grid-area: logo;
+        width: 200px;
+        img{
+            width: 100%;
+        }
     }
 
     &__navegation{
         font-size: 1.6rem;
         text-transform: uppercase;
-        display: flex;
-        justify-content: space-between;
+        grid-area: navegation;
+        transform: translateX(-100%);
+        transition: transform 3s;
+
+        position: absolute;
+        top: 60px;
+        left: 0;
+        transition: all .3s;
+        background-color: $gray;
+        width: 100vh;
+        height: 100vh;
+        padding: 0;
+        
         li{
-            padding: .5rem 1rem;
+            padding: .5rem 3rem;
         }
     }
 
     &__elemnt{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: none;
     }
 
     &__elemnt--icons{
-        margin-right: 5rem;
+        display: flex;
+        margin-left: 0;
+        flex-grow: 2;
+        margin-right: 2rem;
         .search{
             margin-right: 1rem;
         }
     }
 
 }
+
+.mobil{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 5rem;
+    width: 5rem;
+
+    div{
+    width: 100%;
+    height: .5rem;
+    margin-bottom: .5rem;
+    background-color: $black;
+    transform-origin: 0px 100%;
+    transition: all .3s;
+
+}
+
+&__menu--line1active{
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+&__menu--line2active{
+    opacity: 0;
+    margin-left: -30px;
+}
+&__menu--line3active{
+    transform: rotate(-45deg) translate(1px, 2px);
+    }
+}
+.mobil__menu--line1active,
+.mobil__menu--line3active{
+    margin-left: 3px;
+}
+
+.active{
+    transform: translateX(0);
+    transition: transform .3s;
+    a{
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: $black;
+    }
+}
+
+.menu-carrito{
+    grid-area: card;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 5rem;
+    width: 5rem;
+}
+
+@media (min-width: 750px){
+    .menu{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        align-items: center;
+        grid-template-areas: 'logo navegation navegation card';
+        position: relative;
+
+     
+        &__elemnt--icons{
+            margin-left: 5rem;
+        }
+        &__logo{
+            grid-area: logo;
+            width: 150px;
+            img{
+                width: 100%;
+            }
+        }
+        &__navegation{
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            grid-area: navegation;
+            transform: translateX(0);
+            top: 0;
+            transition: all .3s;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+        }
+        &__elemnt{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            grid-area: card;
+        }
+    }
+    .mobil{
+        display: none;
+    }
+    .menu-carrito{
+        display: none;
+    }
+}
+
+@media (min-width: 900px){
+    .menu{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        align-items: center;
+        grid-template-areas: 'logo navegation  navegation navegation  card ';
+        position: relative;
+
+        &__elemnt--icons{
+            margin-left: 10rem;
+        }
+        &__navegation{
+            display: flex;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            grid-area: navegation;
+            transform: translateX(0);
+            top: 0;
+            transition: all .3s;
+            background-color: transparent;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
