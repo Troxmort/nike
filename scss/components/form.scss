@@ -1,0 +1,49 @@
+.form__container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+.form--info{
+    display: block;
+    .campo:nth-child(1){
+        margin-right: 0;
+    }
+}
+
+.campo{
+    width: 100%;
+    margin-bottom: 3rem;
+    
+    input, textarea{
+        color: $white;
+        width: 100%;
+        font-size: 1.6rem;
+        background-color: transparent;
+        border-radius: .5rem;
+        border: 1px solid $white;
+        padding: .5rem;
+        resize: none;
+    }
+    label{
+        display: block;
+        color: $white;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+
+    }
+    ::placeholder{
+        font-size: 1.6rem;
+        color: $gray-light;
+        opacity: .5;
+    }
+}
+
+@media (min-width: 749px){
+    .form--info{
+        display: flex;
+        justify-content: space-between;
+        .campo:nth-child(1){
+            margin-right: 2rem;
+        }
+    }
+}

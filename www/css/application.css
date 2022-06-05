@@ -422,3 +422,52 @@ body {
   overflow-x: hidden;
   background-color: #262626;
 }
+
+.form__container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form--info {
+  display: block;
+}
+.form--info .campo:nth-child(1) {
+  margin-right: 0;
+}
+
+.campo {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.campo input, .campo textarea {
+  color: #ffffff;
+  width: 100%;
+  font-size: 1.6rem;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  border: 1px solid #ffffff;
+  padding: 0.5rem;
+  resize: none;
+}
+.campo label {
+  display: block;
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+.campo ::placeholder {
+  font-size: 1.6rem;
+  color: #d9d9d9;
+  opacity: 0.5;
+}
+
+@media (min-width: 749px) {
+  .form--info {
+    display: flex;
+    justify-content: space-between;
+  }
+  .form--info .campo:nth-child(1) {
+    margin-right: 2rem;
+  }
+}
