@@ -1,0 +1,186 @@
+.join-us{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+
+	.join-us-left{
+		width: 60%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.top-box{
+			margin-bottom: 10px;
+			position: relative;
+			.join-box{
+				.image{
+					width: 100%;
+					overflow: hidden;
+				}
+
+				.text{
+					position: absolute;
+					left: 2px;
+					bottom: 5px;
+				}
+
+				.text-discount{
+					position: absolute;
+					bottom: 10px;
+					right: 10px;
+				}
+			}
+		}
+
+		.bottom-box{
+			display: flex;
+
+			@media screen and (max-width: 1000px){
+				flex-wrap: wrap;
+
+				.wrap{
+					width: 100%;
+					.join-box{
+						width: 50%;
+					}
+				}
+			}
+
+			.wrap{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			.join-box{
+				position: relative;
+				margin-right: 5px;
+				margin-left: 5px;
+				overflow: hidden;
+				.image{
+					width: 100%;
+					overflow: hidden;
+				}
+
+				.text-discount{
+					position: absolute;
+					bottom: 10px;
+					right: 10px;
+					font-size: 29px;
+					line-height: 28px;
+				}
+
+				.position{
+					position: absolute;
+					bottom: 20px;
+					left: 15px;
+				}
+
+				.position-top{
+					top: 10px;
+				}
+			}
+		}
+	}
+
+	.join-us-right{
+		width: 40%;
+		margin-left: 15px;
+		display: flex;
+		justify-content: start;
+		align-items: center;
+
+		.join-box-right{
+			position: relative;
+			.image{
+				width: 100%;
+				overflow: hidden;
+			}
+
+			.text-join{
+				position: absolute;
+				left: 120px;
+				bottom: 220px;
+				font-size: 100px;
+				font-weight: 900;
+				text-transform: uppercase;
+				background: linear-gradient(90deg, #00FFE7 5.22%, #FF00B8 105.35%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+				text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				transition: all 1s;
+			}
+
+			.text-join::before{
+				content: attr(data-text);
+				position: absolute;
+				color: blue;
+				width: 0;
+				overflow: hidden;
+				transition: all 1s;
+			}
+
+			.text-join:hover::before{
+				width: 100%;
+				background: linear-gradient(90deg, #8400ff 5.22%, #00ff80 105.35%);
+				-webkit-background-clip: text;	
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+				-webkit-text-stroke: 1px #fff;
+			}
+		}
+	}
+
+	.text{
+		text-transform: uppercase;
+		line-height: 44px;
+		color: white;
+		font-size: 48px;
+		font-weight: 900;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	.text-discount{
+		text-transform: uppercase;
+		font-size: 45px;
+		line-height: 42px;
+		font-weight: 900;
+		color: #37FEEB;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+	}
+
+	.size{
+		font-size: 40px;
+		line-height: 32px;
+	}
+
+	.image{
+		border-radius: 15px;
+		img{
+			width: 100%;
+			object-fit: cover;
+			transition: 0.5s;
+		}
+	}
+
+	.join-box:hover{
+		img{
+			transform: scale(1.1);
+		}
+	}
+
+	.join-box-right:hover{
+		.image{
+			img{
+				transform: scale(1.1);
+			}
+		}
+	}
+
+}
